@@ -28,6 +28,6 @@ class User(Base):
 
 
 # Create the SQLite DB and tables
-engine = create_engine("sqlite:///test.db")
+engine = create_engine("postgresql+psycopg2://postgres:yourpassword@localhost:5432/postgres")
 Base.metadata.create_all(bind=engine)
 SessionLocal = sessionmaker(bind=engine)
